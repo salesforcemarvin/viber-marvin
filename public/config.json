@@ -14,19 +14,16 @@
     "arguments": {
       "execute": {
         "inArguments": [
-          {
-            "emailAddress": "{{InteractionDefaults.Email}}"
-          },
-          {
-            "phoneNumber": "{{Contact.Default.PhoneNumber}}"
-          }
+          {"chat_id": "@vcbsalesforce"},
+          {"text": "Hi%20Welcome%20to%20my%20group!!"}
         ],
         "outArguments": [
           {
             "foundSignupDate": ""
           }
         ],
-        "url": "https://viber-marvin-26fae9745375.herokuapp.com/execute"
+        "url": "https://api.telegram.org/bot7622096585:AAHe3Tdc4zsc9-9hKvY0C5briAUo4QSIUWs/sendMessage",
+        "verb": "POST"
       }
     },
     "configurationArguments": {
@@ -55,36 +52,6 @@
         "width": 300,
         "fullscreen": true
       }
-    },
-    "schema": {
-      "arguments": {
-        "execute": {
-          "inArguments": [
-            {
-              "phoneNumber": {
-                "dataType": "Phone",
-                "isNullable": false,
-                "direction": "in"
-              }
-            },
-            {
-              "emailAddress": {
-                "dataType": "Email",
-                "isNullable": false,
-                "direction": "in"
-              }
-            }
-          ],
-          "outArguments": [
-            {
-              "foundSignupDate": {
-                "dataType": "Date",
-                "direction": "out",
-                "access": "visible"
-              }
-            }
-          ]
-        }
-      }
     }
+
   }
