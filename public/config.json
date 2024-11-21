@@ -17,11 +17,6 @@
           {"chat_id": "@vcbsalesforce"},
           {"text": "Hi%20Welcome%20to%20my%20group!!"}
         ],
-        "outArguments": [
-          {
-            "foundSignupDate": ""
-          }
-        ],
         "url": "https://api.telegram.org/bot7622096585:AAHe3Tdc4zsc9-9hKvY0C5briAUo4QSIUWs/sendMessage",
         "verb": "POST"
       }
