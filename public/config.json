@@ -14,11 +14,19 @@
     "arguments": {
       "execute": {
         "inArguments": [
-          {"chat_id": "@vcbsalesforce"},
-          {"text": "Hi%20Welcome%20to%20my%20group!!"}
+          {
+            "emailAddress": "{{InteractionDefaults.Email}}"
+          },
+          {
+            "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+          }
         ],
-        "url": "https://api.telegram.org/bot7622096585:AAHe3Tdc4zsc9-9hKvY0C5briAUo4QSIUWs/sendMessage",
-        "verb": "POST"
+        "outArguments": [
+          {
+            "foundSignupDate": ""
+          }
+        ],
+        "url": "https://api.telegram.org/bot7622096585:AAHe3Tdc4zsc9-9hKvY0C5briAUo4QSIUWs/sendMessage?chat_id=@vcbsalesforce&text=Hi Welcome to my group!!"
       }
     },
     "configurationArguments": {
@@ -47,6 +55,36 @@
         "width": 300,
         "fullscreen": true
       }
+    },
+    "schema": {
+      "arguments": {
+        "execute": {
+          "inArguments": [
+            {
+              "phoneNumber": {
+                "dataType": "Phone",
+                "isNullable": false,
+                "direction": "in"
+              }
+            },
+            {
+              "emailAddress": {
+                "dataType": "Email",
+                "isNullable": false,
+                "direction": "in"
+              }
+            }
+          ],
+          "outArguments": [
+            {
+              "foundSignupDate": {
+                "dataType": "Date",
+                "direction": "out",
+                "access": "visible"
+              }
+            }
+          ]
+        }
+      }
     }
-
   }
