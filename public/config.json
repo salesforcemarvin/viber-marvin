@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-      "icon": "images/icon32x32.png",
+      "icon": "images/viber.png",
       "category": "message"
     },
     "type": "REST",
